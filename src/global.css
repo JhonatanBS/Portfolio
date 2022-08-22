@@ -1,0 +1,31 @@
+/* Configurações Globais*/
+
+:root{
+    /*Primary*/ 
+    --primaria-menos: #F79B4D;
+    --primaria: #F58220;
+    --primaria-mais: #C4681A;
+    /*Secondary*/
+    --secundaria-menos: #272727;
+    --secundaria: #0F0F0F;
+    --secundaria-mais: #090909;
+    /*Light*/
+    --light-menos:#F8FAFF;
+    --light:#FFFFFF;
+    --light-mais:#F2E6E6;
+    /*Alert*/
+    --success:#61E16E;
+    --danger:#F29090;
+ }
+
+* {
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--light-menos); 
+}
