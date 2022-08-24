@@ -12,14 +12,9 @@
   height: 85vh;
   width: 100%;
   padding: 0 15vh 0 5vh;
-  /* background-color: red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.developer {
-  
 }
 
 .developer h1 {
@@ -40,12 +35,10 @@
   font-size: 2rem;
 }
 
-
 .developer span {
   color: var(--primaria);
   font-weight: 700;
   text-transform: uppercase;
-
 }
 
 .cardAcademy {
@@ -72,7 +65,6 @@
 .cardAcademy div:nth-child(3) {
   text-align: center;
   height: 380px;
-  /* background-color: blue; */
 }
 
 .cardAcademy div:nth-child(3) h2{
@@ -89,7 +81,6 @@
   width: 100%;
   height: 280px;
   display: block;
-  /* background-color: blue; */
 }
 
 .structure {
@@ -123,8 +114,257 @@
   font-size: 1rem;
   transition: all 0.85s ease;
   filter: drop-shadow(0px 4px 4px #000000);
-
 }
 
 /* Sobre */
 
+/* Conhecimentos*/
+
+/* Projetos */
+
+/* Contato */
+
+/******************************** BREAKPOINTS ********************************/
+
+/* DESKTOP */
+
+@media screen and (max-width: 1700px) {
+
+  .cardAcademy {
+    height: 600px;
+    width: 650px;
+  }
+
+  .cardAcademy div:nth-child(3) {
+    height: 320px;
+  }
+  
+  .cardAcademy div:nth-child(3) h2{
+    font-size: 2.5rem;
+  }
+  
+  .cardAcademy div:nth-child(3) p{
+    font-size: 1.2rem;
+    height: 250px;
+  }
+  
+  .structure {
+    height: 150px;
+  }
+  
+  .cardAcademy .structure a {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .structure p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+
+  .show {
+    padding: 0 13vh 0 5vh;
+  }
+  
+  .developer h1 {
+    font-size: 4.2rem;
+  }
+  
+  .developer h2 {
+    font-size: 2.9rem;
+  }
+  
+  .developer h3 {
+    font-size: 1.9rem;
+  }
+  
+}
+
+@media screen and (max-width: 1550px) {
+
+  .show {
+    padding: 0 10vh 0 5vh;
+  }
+  
+  .developer h1 {
+    font-size: 4rem;
+  }
+  
+  .developer h2 {
+    font-size: 2.8rem;
+  }
+  
+  .developer h3 {
+    font-size: 1.8rem;
+  }
+
+  .cardAcademy {
+    height: 600px;
+    width: 600px;
+  }
+
+  .cardAcademy div:nth-child(3) {
+    height: 320px;
+  }
+  
+  .cardAcademy div:nth-child(3) h2{
+    font-size: 2.5rem;
+  }
+  
+  .cardAcademy div:nth-child(3) p{
+    font-size: 1.2rem;
+    height: 250px;
+  }
+  
+  .structure {
+    height: 150px;
+  }
+  
+  .cardAcademy .structure a {
+    height: 90px;
+    width: 90px;
+  }
+  
+  .structure p {
+    font-size: 1rem;
+  }
+  
+}
+
+@media screen and (max-width: 1450px) {
+
+  .developer h1 {
+    font-size: 3.8rem;
+  }
+  
+  .developer h2 {
+    font-size: 2.6rem;
+  }
+  
+  .developer h3 {
+    font-size: 1.7rem;
+  }
+
+  .cardAcademy {
+    height: 600px;
+    width: 600px;
+  }
+
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 1400px) {
+
+ .main {
+  height: 150vh;
+ }
+
+ .show {
+  display: block;
+  padding: 0;
+  height: 100%;
+ }
+
+ .developer {
+  text-align: center;
+  padding: 50px 0 80px;
+ }
+
+ .cardAcademy {
+  margin: 0 auto;
+ }
+
+}
+
+@media screen and (max-width: 800px) {
+
+  .developer h1{
+    font-size: 3rem;
+  }
+
+  .developer h2{
+    font-size: 2rem;
+  }
+
+  .developer h3{
+    font-size: 1.4rem;
+  }
+
+  .cardAcademy {
+    width: 460px;
+  }
+
+  .cardAcademy div:nth-child(3){
+    height: 400px;
+  }
+
+  .cardAcademy div:nth-child(3) h2{
+    font-size: 2rem;
+  }
+
+  .cardAcademy div:nth-child(3) p{
+    margin-top: 15px;
+    font-size: 1.1rem;
+  }
+
+  .cardAcademy .structure {
+    height: 50px;
+    top: 2px;
+  }
+
+  .cardAcademy .structure a{
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .developer h1{
+    font-size: 2rem;
+  }
+
+  .developer h2{
+    font-size: 1.5rem;
+  }
+
+  .developer h3{
+    font-size: 1rem;
+  }
+
+  .cardAcademy {
+    width: 330px;
+  }
+
+  .cardAcademy div:nth-child(3){
+    height: 400px;
+  }
+
+  .cardAcademy div:nth-child(3) h2{
+    font-size: 1.5rem;
+    padding: 0;
+  }
+
+  .cardAcademy div:nth-child(3) p{
+    font-size: 1rem;
+    padding: 0 30px;
+  }
+
+  .cardAcademy div:nth-child(3) p:nth-child(3){
+    margin-top: 75px;
+    font-size: 1rem;
+  }
+
+  .cardAcademy .structure {
+    height: 50px;
+    top: 2px;
+  }
+
+  .cardAcademy .structure a{
+    height: 60px;
+    width: 60px;
+  }
+}

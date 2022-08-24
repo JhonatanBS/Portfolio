@@ -79,6 +79,10 @@ export function App() {
       </main>
 
       {/* SOBRE */}
+
+      <div>
+        
+      </div>
     </>
   )
 }
