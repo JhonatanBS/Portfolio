@@ -73,6 +73,10 @@
   font-size: 3rem;
 }
 
+.cardAcademy div:nth-child(3) p:nth-child(2){
+  text-align: justify;
+}
+
 .cardAcademy div:nth-child(3) p{
   color: var(--secundaria-menos);
   line-height: 1.5;
@@ -98,7 +102,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--light-menos);
+  color: vapxpxr(--light-menos);
   position: relative;
   top: 25px;
   text-decoration: none;
@@ -107,6 +111,11 @@
   transition: all 1s ease;
   flex-direction: column;
   filter: drop-shadow(0px 4px 4px #000000);
+  color: var(--light-menos);
+}
+
+.cardAcademy .structure a:hover {
+  background-color: var(--primaria);
 }
 
 .structure p {
@@ -114,9 +123,60 @@
   font-size: 1rem;
   transition: all 0.85s ease;
   filter: drop-shadow(0px 4px 4px #000000);
+  color: var(--light);
 }
 
 /* Sobre */
+
+.about {
+  height: 80vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--light-menos);
+}
+
+.about .photo {
+  height: 500px;
+  width: 800px;
+  object-fit: cover;
+  background-position: center;
+}
+
+.about .photo img {
+  height: 100%;
+  width: 100%;
+
+}
+
+.description {
+  height: 500px;
+  width: 800px;
+  padding: 2rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description h4 {
+  font-size: 3rem;
+  color: var(--secundaria-menos);
+  padding: 0 0 1.5rem 0;
+}
+
+.description span {
+  color: var(--primaria);
+  text-transform: uppercase;
+}
+
+.description p {
+  font-size: 1.4rem;
+  width: 700px;
+  height: 500px;
+  color: var(--secundaria-menos);
+  line-height: 1.5;
+}
 
 /* Conhecimentos*/
 
@@ -260,12 +320,13 @@
 
  .main {
   height: 150vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 95%, 50% 100%, 0 95%);
  }
 
  .show {
   display: block;
   padding: 0;
-  height: 100%;
+  /* height: 150vh; */
  }
 
  .developer {

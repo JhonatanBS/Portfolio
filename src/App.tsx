@@ -1,8 +1,11 @@
 import { Header } from "./components/Header/Header";
+import { Title } from "./components/Title/Title";
 import { NumberSquareSix, TreeStructure, Stack, Cardholder, SidebarSimple, Tree } from "phosphor-react";
 
 import styles from "./App.module.css";
 import "./global.css";
+import photo from "./assets/img/Perfil.png"
+import { Button } from "./components/Button/Button";
 
 export function App() { 
 
@@ -80,9 +83,33 @@ export function App() {
 
       {/* SOBRE */}
 
-      <div>
-        
-      </div>
+      <section>
+        <Title title={"Sobre"}/>
+
+        <div className={styles.about}>
+
+          <div className={styles.photo}>
+            <img src={photo} />
+          </div>
+
+          <div className={styles.description}>
+            <h4>Ola, sou o <span>Jhonatan</span></h4>
+            <p>
+            Meu primeiro contato com programação foi na faculdade no ano de 2020,
+            utilizando a linguagem C como base para lógica de programação, em seguida
+            JAVA para Programação Orientada a Objetos, e foi na disciplina de estrutura
+            de dados que minha paixão por programação se formou, aonde éramos desafiados
+             a criar códigos do zero em C.
+            </p>
+            <p>Apaixonado por esse pequeno mundo que criamos no desenvolvimento Web, simplicando
+               tarefas, melhorando a vida das pessoas.
+            </p>
+          <Button download="Download CV"/>
+          </div>
+
+
+        </div>
+      </section>
     </>
   )
 }

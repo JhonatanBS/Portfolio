@@ -1,0 +1,19 @@
+.title {
+  width: 100%;
+  height: 10vh;
+  font-size: 2.3rem;
+  padding: 1rem 0 0 0;
+  color: var(--secundaria-menos);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title h2 {
+  display: block;  
+  border-bottom: 5px solid var(--primaria); 
+  height: 4.3rem; 
+  text-transform: uppercase;
+  border-radius: 8px;
+}
