@@ -1,0 +1,130 @@
+/* Home */
+
+.main {
+  width: 100%;  
+  height: 120vh;
+  background-image: url(./assets/img/Background.png);
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0%, 100% 85%, 50% 100%, 0 85%);
+}
+
+.show {
+  height: 85vh;
+  width: 100%;
+  padding: 0 15vh 0 5vh;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.developer {
+  
+}
+
+.developer h1 {
+  color: var(--light);
+  text-transform: uppercase;
+  font-size: 4.3rem;
+}
+
+.developer h2 {
+  color: var(--light);
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.developer h3 {
+  color: var(--light);
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+
+.developer span {
+  color: var(--primaria);
+  font-weight: 700;
+  text-transform: uppercase;
+
+}
+
+.cardAcademy {
+  height: 650px;
+  width: 750px;
+  background-color: var(--light);
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 20px;
+}
+
+.cardAcademy span {
+  display: block;
+  height: 60px;
+  width: 100%;
+  background-color: var(--primaria-mais);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 0%, 0 100%);
+}
+
+.cardAcademy div:nth-child(2) {
+  text-align: center;
+  color: var(--primaria-mais);
+}
+
+.cardAcademy div:nth-child(3) {
+  text-align: center;
+  height: 380px;
+  /* background-color: blue; */
+}
+
+.cardAcademy div:nth-child(3) h2{
+  color: var(--secundaria);
+  padding: 20px 0 20px 0;
+  font-size: 3rem;
+}
+
+.cardAcademy div:nth-child(3) p{
+  color: var(--secundaria-menos);
+  line-height: 1.5;
+  font-size: 1.4rem;
+  padding: 20px 61px;
+  width: 100%;
+  height: 280px;
+  display: block;
+  /* background-color: blue; */
+}
+
+.structure {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.cardAcademy .structure a {
+  height: 114px;
+  width: 114px;
+  background-color: var(--primaria-mais);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-menos);
+  position: relative;
+  top: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  overflow: hidden;
+  transition: all 1s ease;
+  flex-direction: column;
+  filter: drop-shadow(0px 4px 4px #000000);
+}
+
+.structure p {
+  padding: 5px;
+  font-size: 1rem;
+  transition: all 0.85s ease;
+  filter: drop-shadow(0px 4px 4px #000000);
+
+}
+
+/* Sobre */
+
