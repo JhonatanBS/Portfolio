@@ -83,7 +83,7 @@ export function App() {
 
       {/* SOBRE */}
 
-      <section>
+      <section className={styles.sectionAbout} >
         <Title title={"Sobre"}/>
 
         <div className={styles.about}>
