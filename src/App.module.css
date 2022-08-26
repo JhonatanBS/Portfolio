@@ -336,13 +336,16 @@
 @media screen and (max-width: 1400px) {
 
  .main {
-  height: 150vh;
-  clip-path: polygon(0 0, 100% 0%, 100% 95%, 50% 100%, 0 95%);
+  height: 100%;
+  clip-path: none;
  }
 
  .show {
   display: block;
   padding: 0;
+  height: 100%;
+  /* margin-bottom: 100px; */
+  padding-bottom: 100px;
  }
 
  .developer {
@@ -392,6 +395,10 @@
 }
 
 @media screen and (max-width: 800px) {
+
+  .main {
+    /* height: 200vh; */
+  }
 
   .developer h1{
     font-size: 3rem;
@@ -448,6 +455,12 @@
     height: 90px;
     width: 33rem;
     margin: 0;
+  }
+}
+
+@media screen and (max-height: 600px ) {
+  .main {
+    /* height: 200vh; */
   }
 }
 
