@@ -180,6 +180,34 @@
 
 /* Conhecimentos*/
 
+.know {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.backend {
+  height: 100%;
+  width: 50%;
+  background-color: var(--secundaria);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 80px 0;
+}
+
+.frontend {
+  height: 100%;
+  width: 50%;
+  background-color: var(--secundaria-menos);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 80px 0;
+}
+
 /* Projetos */
 
 /* Contato */

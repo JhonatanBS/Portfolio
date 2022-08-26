@@ -10,6 +10,10 @@
   align-items: center;
 }
 
+.titleLight {
+  color: var(--light-menos);
+}
+
 .title h2 {
   display: block;  
   border-bottom: 5px solid var(--primaria); 

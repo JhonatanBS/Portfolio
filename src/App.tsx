@@ -6,8 +6,88 @@ import styles from "./App.module.css";
 import "./global.css";
 import photo from "./assets/img/Perfil.png"
 import { Button } from "./components/Button/Button";
+import { CardKnow } from "./components/Card/CardKnow";
+import { useState } from "react";
 
 export function App() { 
+
+  const backend = [
+    {
+     id: 1, 
+     icon: "src/assets/img/know/node.svg", 
+     title: "Node",
+     description: "Node é um runtime Javascript, interpretado pelo motor V8 do Chrome, totalmente independente do navegador. ",
+    },
+    {
+      id: 2, 
+      icon: "src/assets/img/know/C.svg", 
+      title: "C",
+      description: "Linguagem de baixo nível, com tipos primitivos, vetores, registros, arquivos, ponteiros.",
+    },
+    {
+      id: 3, 
+      icon: "src/assets/img/know/java.svg", 
+      title: "Java",
+      description: "Linguagem que se destaca por Programação Orientada a Objetos, com tipagem fortíssima.",
+    },
+    {
+      id: 4, 
+      icon: "src/assets/img/know/mysql.svg", 
+      title: "Mysql",
+      description: "Banco de dados relacional, formado por tabelas, colunas, linhas, dados e comandos SQL.",
+    },
+    {
+      id: 5, 
+      icon: "src/assets/img/know/mongodb.svg", 
+      title: "MongoDB",
+      description: "Banco de dados não relacional, formado por collections, documents e fields, com dados em BSON.",
+    },
+    {
+      id: 6, 
+      icon: "src/assets/img/know/docker.svg", 
+      title: "Docker",
+      description: "Ferramenta que isola aplicações, criando imagens executadas por containers, diminuindo o tempo de configuração de aplicativos.",
+    },
+  ]
+
+  const frontend = [
+    {
+     id: 1, 
+     icon: "src/assets/img/know/html.svg", 
+     title: "Html",
+     description: "Uma linguagem de marcação para construir páginas web, formada por tags e sua semântica no navegador é indispensável.",
+    },
+    {
+      id: 2, 
+      icon: "src/assets/img/know/css.svg", 
+      title: "css3",
+      description: "Linguagem de estilização de páginas web, responsável por estilizar tags através de id e classes.",
+    },
+    {
+      id: 3, 
+      icon: "src/assets/img/know/javascript.svg", 
+      title: "Javascript",
+      description: "Linguagem de programação estruturada, de script de alto nível, com tipagem fraca.",
+    },
+    {
+      id: 4, 
+      icon: "src/assets/img/know/bootstrap.svg", 
+      title: "Bootstrap",
+      description: "Ferramenta utilizada para responsividade e inserção de componentes de estilização.",
+    },
+    {
+      id: 5, 
+      icon: "src/assets/img/know/react.svg", 
+      title: "React",
+      description: "Uma biblioteca Javascript para criação de interfaces de usuário, formada por hooks, componentes, props, contextos e muito mais.",
+    },
+    {
+      id: 6, 
+      icon: "src/assets/img/know/typescript.svg", 
+      title: "Typescript",
+      description: "É um super set do Javascript, carregado de novas funcionalidades, mas seu principal ponto é tipagem estática fortíssima.",
+    },
+  ]
 
   return (
     <>
@@ -84,7 +164,7 @@ export function App() {
       {/* SOBRE */}
 
       <section className={styles.sectionAbout} >
-        <Title title={"Sobre"}/>
+        <Title title={"Sobre"} color="dark"/>
 
         <div className={styles.about}>
 
@@ -107,8 +187,38 @@ export function App() {
           <Button download="Download CV"/>
           </div>
 
+        </div>
+      </section>
+
+      {/* KNOWLEDGE */}
+
+      <section className={styles.know}>
+
+        <div className={styles.backend} >
+          
+            
+            <Title title="Back-end" color="light"/> 
+            
+            <>
+              {backend.map( card => {
+              return <CardKnow key={card.id} src={card.icon} title={card.title} description={card.description}/>
+              })}
+            </>
+            
+        </div>
+
+        <div className={styles.frontend}>
+
+        <Title title="Front-end" color="light"/>
+
+        <>
+              {frontend.map( card => {
+              return <CardKnow key={card.id} src={card.icon} title={card.title} description={card.description}/>
+              })}
+            </>
 
         </div>
+
       </section>
     </>
   )
