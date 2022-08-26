@@ -344,7 +344,6 @@
   display: block;
   padding: 0;
   height: 100%;
-  /* margin-bottom: 100px; */
   padding-bottom: 100px;
  }
 
@@ -359,8 +358,14 @@
 
    /* SOBRE */
 
+   .sectionAbout {
+    height: 100%;
+    width: 100%;
+   }
+
    .about {
-    height: 80vh;
+    height: 100%;
+    width: 100%;
     flex-direction: column;
   }
 
@@ -371,7 +376,7 @@
   }
 
   .description {
-    height: 500px;
+    height: 100%;
     width: 100%;
   }
 
@@ -381,13 +386,13 @@
   }
 
   .about .description p {
-    height: 150px;
+    height: 100%;
     width: 50rem;
     margin: 0 5rem;
   }
 
   .about .description p:nth-child(3) {
-    height: 70px;
+    height: 100%;
     width: 50rem;
     margin: 0 5rem;
   }
@@ -395,10 +400,6 @@
 }
 
 @media screen and (max-width: 800px) {
-
-  .main {
-    /* height: 200vh; */
-  }
 
   .developer h1{
     font-size: 3rem;
@@ -447,29 +448,16 @@
 
   .about .description p {
     font-size: 1.2rem;
-    height: 400px;
     width: 33rem;
   }
 
   .about .description p:nth-child(3) {
-    height: 90px;
     width: 33rem;
     margin: 0;
   }
 }
 
-@media screen and (max-height: 600px ) {
-  .main {
-    /* height: 200vh; */
-  }
-}
-
 @media screen and (max-width: 550px) {
-
-  .sectionAbout{
-    height: 100vh;
-    width: 100%;
-  }
 
   .developer h1{
     font-size: 2rem;
@@ -529,12 +517,10 @@
 
   .about .description p {
     font-size: 1.1rem;
-    height: 300px;
     width: 25rem;
   }
 
   .about .description p:nth-child(3) {
-    height: 90px;
     width: 25rem;
     margin-bottom: 40px;
   }
@@ -542,18 +528,13 @@
 
 @media screen and (max-width: 450px) {
 
-  .sectionAbout {
-    height: 110vh;
-  }
-
   .about .description p {
     font-size: 1.1rem;
-    height: 350px;
+    height: 100%;
     width: 23rem;
   }
 
   .about .description p:nth-child(3) {
-    height: 90px;
     width: 23rem;
     margin-bottom: 50px;
   }
