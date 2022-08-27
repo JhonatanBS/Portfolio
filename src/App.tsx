@@ -7,44 +7,56 @@ import "./global.css";
 import photo from "./assets/img/Perfil.png"
 import { Button } from "./components/Button/Button";
 import { CardKnow } from "./components/Card/CardKnow";
-import { useState } from "react";
 
-export function App() { 
+import C from "./assets/img/know/C.svg";
+import mongodb from "./assets/img/know/mongodb.svg";
+import node from "./assets/img/know/node.svg";
+import mysql from "./assets/img/know/mysql.svg";
+import docker from "./assets/img/know/docker.svg";
+import java from "./assets/img/know/java.svg";
+import html from "./assets/img/know/html.svg";
+import css from "./assets/img/know/css.svg";
+import javascript from "./assets/img/know/javascript.svg";
+import bootstrap from "./assets/img/know/bootstrap.svg";
+import react from "./assets/img/know/react.svg";
+import typescript from "./assets/img/know/typescript.svg";
+
+export function App() {
 
   const backend = [
     {
      id: 1, 
-     icon: "src/assets/img/know/node.svg", 
+     icon: node, 
      title: "Node",
      description: "Node é um runtime Javascript, interpretado pelo motor V8 do Chrome, totalmente independente do navegador. ",
     },
     {
       id: 2, 
-      icon: "src/assets/img/know/C.svg", 
+      icon: C, 
       title: "C",
       description: "Linguagem de baixo nível, com tipos primitivos, vetores, registros, arquivos, ponteiros.",
     },
     {
       id: 3, 
-      icon: "src/assets/img/know/java.svg", 
+      icon: java, 
       title: "Java",
       description: "Linguagem que se destaca por Programação Orientada a Objetos, com tipagem fortíssima.",
     },
     {
       id: 4, 
-      icon: "src/assets/img/know/mysql.svg", 
+      icon: mysql, 
       title: "Mysql",
       description: "Banco de dados relacional, formado por tabelas, colunas, linhas, dados e comandos SQL.",
     },
     {
       id: 5, 
-      icon: "src/assets/img/know/mongodb.svg", 
+      icon: mongodb, 
       title: "MongoDB",
       description: "Banco de dados não relacional, formado por collections, documents e fields, com dados em BSON.",
     },
     {
       id: 6, 
-      icon: "src/assets/img/know/docker.svg", 
+      icon: docker, 
       title: "Docker",
       description: "Ferramenta que isola aplicações, criando imagens executadas por containers, diminuindo o tempo de configuração de aplicativos.",
     },
@@ -53,37 +65,37 @@ export function App() {
   const frontend = [
     {
      id: 1, 
-     icon: "src/assets/img/know/html.svg", 
+     icon: html, 
      title: "Html",
      description: "Uma linguagem de marcação para construir páginas web, formada por tags e sua semântica no navegador é indispensável.",
     },
     {
       id: 2, 
-      icon: "src/assets/img/know/css.svg", 
+      icon: css ,
       title: "css3",
       description: "Linguagem de estilização de páginas web, responsável por estilizar tags através de id e classes.",
     },
     {
       id: 3, 
-      icon: "src/assets/img/know/javascript.svg", 
+      icon: javascript, 
       title: "Javascript",
       description: "Linguagem de programação estruturada, de script de alto nível, com tipagem fraca.",
     },
     {
       id: 4, 
-      icon: "src/assets/img/know/bootstrap.svg", 
+      icon: bootstrap, 
       title: "Bootstrap",
       description: "Ferramenta utilizada para responsividade e inserção de componentes de estilização.",
     },
     {
       id: 5, 
-      icon: "src/assets/img/know/react.svg", 
+      icon: react, 
       title: "React",
       description: "Uma biblioteca Javascript para criação de interfaces de usuário, formada por hooks, componentes, props, contextos e muito mais.",
     },
     {
       id: 6, 
-      icon: "src/assets/img/know/typescript.svg", 
+      icon: typescript, 
       title: "Typescript",
       description: "É um super set do Javascript, carregado de novas funcionalidades, mas seu principal ponto é tipagem estática fortíssima.",
     },
