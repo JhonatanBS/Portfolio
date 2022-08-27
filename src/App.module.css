@@ -425,6 +425,23 @@
     margin: 0 5rem;
   }
 
+  /* Conhecimentos */
+
+  .know {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .know .backend {
+    width: 100%;
+    
+  }
+
+  .know .frontend{
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -483,6 +500,7 @@
     width: 33rem;
     margin: 0;
   }
+
 }
 
 @media screen and (max-width: 550px) {

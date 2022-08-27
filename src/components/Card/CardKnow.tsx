@@ -11,7 +11,9 @@ export function CardKnow({src, title, description}: IKnow){
   return (
     <div className={styles.card}>
       <div className={styles.front}>
-        <img src={src}/>
+        <div className={styles.icon}>
+          <img src={src}/>
+        </div>
       </div>
 
       <div className={styles.back}>

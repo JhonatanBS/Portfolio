@@ -21,3 +21,10 @@
   text-transform: uppercase;
   border-radius: 8px;
 }
+
+@media screen and (max-width: 600px){
+  .title {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+  }
+}

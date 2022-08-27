@@ -41,6 +41,11 @@
   z-index: 1;
 }
 
+.card .icon {
+  height: 150px;
+  width: 150px;
+}
+
 .card img {
   height: 100%;
   width: 100%;
@@ -60,4 +65,10 @@
   color: var(--light);
   font-weight: 700;
   padding: 0 1rem;
+}
+
+@media screen and (max-width: 900px){
+  .card {
+    margin: 3rem 0;
+  }
 }
