@@ -208,14 +208,13 @@ export function App() {
 
         <div className={styles.backend} >
           
-            
             <Title title="Back-end" color="light"/> 
             
-            <>
+            <div className={styles.sectionBack}>
               {backend.map( card => {
               return <CardKnow key={card.id} src={card.icon} title={card.title} description={card.description}/>
               })}
-            </>
+            </div>
             
         </div>
 
@@ -223,11 +222,11 @@ export function App() {
 
         <Title title="Front-end" color="light"/>
 
-        <>
+        <div className={styles.sectionFront}>
               {frontend.map( card => {
               return <CardKnow key={card.id} src={card.icon} title={card.title} description={card.description}/>
               })}
-            </>
+            </div>
 
         </div>
 
