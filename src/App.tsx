@@ -7,7 +7,9 @@ import "./global.css";
 import photo from "./assets/img/Perfil.png"
 import { Button } from "./components/Button/Button";
 import { CardKnow } from "./components/Card/CardKnow";
+import { Radio } from "./components/Radio/Radio";
 
+/* Images in Know */
 import C from "./assets/img/know/C.svg";
 import mongodb from "./assets/img/know/mongodb.svg";
 import node from "./assets/img/know/node.svg";
@@ -20,6 +22,24 @@ import javascript from "./assets/img/know/javascript.svg";
 import bootstrap from "./assets/img/know/bootstrap.svg";
 import react from "./assets/img/know/react.svg";
 import typescript from "./assets/img/know/typescript.svg";
+import { useState } from "react";
+
+/* Images in Projects*/
+import capaTodo from "./assets/img/projects/capaTodo.svg";
+import capaLab from "./assets/img/projects/capaLab.svg";
+import capaFeed from "./assets/img/projects/capaFeed.svg";
+import github from "./assets/img/projects/github.svg";
+import vercel from "./assets/img/projects/vercel.svg";
+import netlify from "./assets/img/projects/netlify.svg";
+
+interface ISlides {
+  id: number,
+  image: string,
+  title: string,
+  description: string,
+  repository: {icon: string, link: string},
+  deploy: {icon: string, link: string},
+}
 
 export function App() {
 
@@ -101,6 +121,51 @@ export function App() {
     },
   ]
 
+  const [slide, setSlide] = useState<ISlides>(
+    {
+      id: 1,
+      image: capaTodo,
+      title: "Todo List",
+      description: "Projeto criado utilizando React com Typescript, utilizando um array, manipulamos o CRUD das tarefas para criar, deletar e atualizar as tarefas concluídas.",
+      repository: {icon: github, link: "https://github.com/JhonatanBS/REACT/tree/main/Desafios/todoList"},
+      deploy: {icon: netlify, link: "https://todo-jhonatan.netlify.app/"},
+    },
+  );
+
+  const slides = [
+    {
+      id: 1,
+      image: capaTodo,
+      title: "Todo List",
+      description: "Projeto criado utilizando React com Typescript, utilizando um array, manipulamos o CRUD das tarefas para criar, deletar e atualizar as tarefas concluídas.",
+      repository: {icon: github, link: "https://github.com/JhonatanBS/REACT/tree/main/Desafios/todoList"},
+      deploy: {icon: netlify, link: "https://todo-jhonatan.netlify.app/"},
+    },
+    {
+      id: 2,
+      image: capaLab,
+      title: "Ignite Lab",
+      description: "Projeto criado utilizando React com Typescript, Tailwind, GraphQL, Apollo Client; com a plataforma hygraph criamos querys cadastrar novos usuários e para inserir as aulas e professores.",
+      repository: {icon: github, link: "https://github.com/JhonatanBS/Ignite-Lab"},
+      deploy: {icon: vercel, link: "https://ignite-lab-eta-ochre.vercel.app"},
+    },
+    {
+      id: 3,
+      image: capaFeed,
+      title: "Ignite Feed",
+      description: "Projeto criado utilizando React com Typescript, com um array, criamos, deletamos, atualizamos, listamos comentários.",
+      repository: {icon: github, link: "https://github.com/JhonatanBS/REACT/tree/main/Curso_ROCKETSEAT/Projeto01/01_fundamentos_reactjs-ts"},
+      deploy: {icon: netlify, link: "https://ignite-feed-jhonatan.netlify.app"},
+    },
+  ]
+
+  function handleAlterSlide(idSlide: number):void {
+    const actual = slides.find( slide => slide.id === idSlide);
+
+    setSlide(actual);
+  }
+
+  
   return (
     <>
       {/* HOME */}
@@ -230,6 +295,44 @@ export function App() {
 
         </div>
 
+      </section>
+
+      {/* Projects */}
+
+      <section className={styles.sectionProjects}>
+
+        <div className={styles.backgroundProject}>
+            <img src={slide.image} />
+            
+            <div className={styles.slideDescription}>
+              <div className={styles.radioList}>
+              {slides.map( slide => {
+              return <Radio id={slide.id} AlterSlide={handleAlterSlide}/>
+              })}
+              </div>
+
+              <div className={styles.textDescription}>
+                <h2>{slide.title}</h2>
+                <p>{slide.description}</p>
+                
+                <div className={styles.buttonLinks}>
+                  <a href={slide.repository.link} target="_blank"> Repositório
+                  <img src={slide.repository.icon} />
+                  </a>
+
+                  <a href={slide.deploy.link} target="_blank"> Deploy
+                  <img src={slide.deploy.icon} />
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+
+        <div className={styles.titleProject}>
+          <Title title="Projetos" color="dark"/>
+        </div>
+        
       </section>
     </>
   )
