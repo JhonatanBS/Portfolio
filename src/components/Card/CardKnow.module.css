@@ -7,7 +7,6 @@
   padding: 1rem;
 
   perspective: 700px;
-  margin: 50px;
 }
 
 .card .back, .front {
@@ -68,8 +67,8 @@
   padding: 0 1rem;
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1300px){
   .card {
-    margin: 3rem 0;
+    margin: 3rem;
   }
 }
