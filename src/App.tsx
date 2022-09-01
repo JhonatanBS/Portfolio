@@ -25,12 +25,15 @@ import typescript from "./assets/img/know/typescript.svg";
 import { useState } from "react";
 
 /* Images in Projects*/
-import capaTodo from "./assets/img/projects/capaTodo.svg";
-import capaLab from "./assets/img/projects/capaLab.svg";
-import capaFeed from "./assets/img/projects/capaFeed.svg";
+import capaTodo from "./assets/img/projects/capatodo.svg";
+import capaLab from "./assets/img/projects/capalab.svg";
+import capaFeed from "./assets/img/projects/capafeed.svg";
+import capadsMovie from "./assets/img/projects/capaDSmovie.png";
+import capadsVendas from "./assets/img/projects/capaDSVendas.png";
 import github from "./assets/img/projects/github.svg";
 import vercel from "./assets/img/projects/vercel.svg";
 import netlify from "./assets/img/projects/netlify.svg";
+
 
 interface ISlides {
   id: number,
@@ -156,6 +159,22 @@ export function App() {
       description: "Projeto criado utilizando React com Typescript, com um array, criamos, deletamos, atualizamos, listamos comentários.",
       repository: {icon: github, link: "https://github.com/JhonatanBS/REACT/tree/main/Curso_ROCKETSEAT/Projeto01/01_fundamentos_reactjs-ts"},
       deploy: {icon: netlify, link: "https://ignite-feed-jhonatan.netlify.app"},
+    },
+    {
+      id: 4,
+      image: capadsVendas,
+      title: "DSVendas",
+      description: "Projeto criado utilizando React com Typescript, com um array, criamos, deletamos, atualizamos, listamos comentários.",
+      repository: {icon: github, link: "https://github.com/JhonatanBS/DSVendas"},
+      deploy: {icon: netlify, link: "https://dsvendas-jhonatanbs.netlify.app/"},
+    },
+    {
+      id: 5,
+      image: capadsMovie,
+      title: "DSMovie",
+      description: "Projeto criado utilizando React com Typescript, com um array, criamos, deletamos, atualizamos, listamos comentários.",
+      repository: {icon: github, link: "https://github.com/JhonatanBS/dsmovie"},
+      deploy: {icon: netlify, link: "https://jhonatanbs-dsmovie.netlify.app/"},
     },
   ]
 
@@ -302,7 +321,9 @@ export function App() {
       <section className={styles.sectionProjects}>
 
         <div className={styles.backgroundProject}>
+            <div className={styles.imgProject}>
             <img src={slide?.image} />
+            </div>
             
             <div className={styles.slideDescription}>
               <div className={styles.radioList}>
@@ -329,10 +350,16 @@ export function App() {
             
         </div>
 
-        <div className={styles.titleProject}>
+        {/* <div className={styles.titleProject}>
           <Title title="Projetos" color="dark"/>
         </div>
-        
+         */}
+      </section>
+
+      {/* Contact */}
+
+      <section className={styles.contact}>
+
       </section>
     </>
   )

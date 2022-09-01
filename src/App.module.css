@@ -229,24 +229,29 @@
 
 .backgroundProject {
   width: 100%;
-  height: 85vh;
+  height: 100vh;
   position: relative;
   transition: all .5s ease;
 }
 
-.backgroundProject img{
+.imgProject {
+  height: 100%;
+  width: 100%;
+}
+
+.imgProject img{
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: bottom;
+  object-position: top;
 }
 
 .slideDescription {
-  height: 500px;
-  width: 1572px;
+  height: 400px;
+  width: 100%;
   background-color: var(--secundaria-menos);
   position: absolute;
-  bottom: -15vh;
+  bottom: 0;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -262,7 +267,7 @@
   align-items: center;
 }
 
-.slideDescription h2 {
+.textDescription h2 {
   font-size: 58px;
   text-transform: uppercase;
   color: var(--light);
@@ -271,15 +276,15 @@
   transition: color 0.5s ease;
 }
 
-.slideDescription h2:hover {
+.textDescription h2:hover {
   color: var(--primaria);
 }
 
-.slideDescription p {
-  width: 70rem;
+.textDescription p {
+  width: 80rem;
   font-size: 1.8rem;
   color: var(--light);
-  height: 200px;
+  height: 100px;
   font-weight: 400;
   text-shadow: rgba(0, 0, 0, 0.5) 0 2px;
 }
@@ -324,6 +329,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 1rem;
 }
 
 .titleProject {
@@ -334,6 +340,12 @@
 }
 
 /* Contato */
+
+.contact {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--secundaria);
+}
 
 /******************************** BREAKPOINTS ********************************/
 
@@ -407,7 +419,7 @@
     height: 600px;
     padding: 0 3rem;
   }
-  
+
 }
 
 @media screen and (max-width: 1550px) {
@@ -539,7 +551,7 @@
   .about .description p {
     height: 100%;
     width: 50rem;
-    margin: 0 5rem;
+    margin: 2rem 5rem;
   }
 
   .about .description p:nth-child(3) {
@@ -558,11 +570,62 @@
 
   .backend {
     width: 100%;
-    /* height: 200vh; */
   }
 
   .frontend{
     width: 100%;
+  }
+
+  /* Projetos */
+
+  .backgroundProject {
+    height: 100%;
+  }
+
+  .backgroundProject img{
+    object-fit: contain;
+    object-position:  top;
+  }
+
+  .slideDescription {
+    height: 500px;
+    position: relative;
+  }
+
+  .backgroundProject img {
+    object-fit: cover;
+  }
+
+  .textDescription p {
+    height: 200px;
+    width: 100%;
+    padding: 0 1.8rem;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+
+  
+  .slideDescription {
+    height: 750px;
+    position: static;
+  }
+
+  .buttonLinks {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+  }
+
+  .buttonLinks a:nth-child(1) {
+    margin-right: 0;
+  }
+
+  .radioList {
+    width: 400px;
   }
 
 }
@@ -693,6 +756,17 @@
     width: 25rem;
     margin-bottom: 40px;
   }
+
+  /* Projetos */
+
+  .slideDescription p  {
+    font-size: 1.5rem;
+  }
+
+  .buttonLinks a {
+    width: 300px;
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -706,5 +780,15 @@
   .about .description p:nth-child(3) {
     width: 23rem;
     margin-bottom: 50px;
+  }
+
+  /* Projetos */
+
+  .slideDescription {
+    height: 705px;
+  }
+
+  .radioList {
+    width: 300px;
   }
 }
