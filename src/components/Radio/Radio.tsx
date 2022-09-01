@@ -2,10 +2,11 @@ import styles from "./Radio.module.css";
 
 interface IId {
   id: number;
+  done: boolean;
   AlterSlide(idSlide : number): void;
 }
 
-export function Radio({id, AlterSlide}: IId) {
+export function Radio({id, done, AlterSlide}: IId) {
 
 	function handleAlterSlideOnClick() {
 	  AlterSlide(id);	
@@ -17,6 +18,7 @@ export function Radio({id, AlterSlide}: IId) {
 			  type="radio" 
 			  name="slides" 
 			  id={`${id}`} 
+			  checked={done}
 			  onClick={handleAlterSlideOnClick}
 			  />
 			  

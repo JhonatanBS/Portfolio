@@ -42,6 +42,7 @@ interface ISlides {
   description: string,
   repository: {icon: string, link: string},
   deploy: {icon: string, link: string},
+  done: boolean
 }
 
 export function App() {
@@ -124,7 +125,7 @@ export function App() {
     },
   ]
 
-  const [slide, setSlide] = useState<ISlides | undefined>(
+  const [slides, setSlides] = useState<ISlides[]>([
     {
       id: 1,
       image: capaTodo,
@@ -132,17 +133,7 @@ export function App() {
       description: "Projeto criado utilizando React com Typescript, utilizando um array, manipulamos o CRUD das tarefas para criar, deletar e atualizar as tarefas concluídas.",
       repository: {icon: github, link: "https://github.com/JhonatanBS/REACT/tree/main/Desafios/todoList"},
       deploy: {icon: netlify, link: "https://todo-jhonatan.netlify.app/"},
-    }
-  );
-
-  const slides: ISlides[] = [
-    {
-      id: 1,
-      image: capaTodo,
-      title: "Todo List",
-      description: "Projeto criado utilizando React com Typescript, utilizando um array, manipulamos o CRUD das tarefas para criar, deletar e atualizar as tarefas concluídas.",
-      repository: {icon: github, link: "https://github.com/JhonatanBS/REACT/tree/main/Desafios/todoList"},
-      deploy: {icon: netlify, link: "https://todo-jhonatan.netlify.app/"},
+      done: true,
     },
     {
       id: 2,
@@ -151,6 +142,7 @@ export function App() {
       description: "Projeto criado utilizando React com Typescript, Tailwind, GraphQL, Apollo Client; com a plataforma hygraph criamos querys cadastrar novos usuários e para inserir as aulas e professores.",
       repository: {icon: github, link: "https://github.com/JhonatanBS/Ignite-Lab"},
       deploy: {icon: vercel, link: "https://ignite-lab-eta-ochre.vercel.app"},
+      done: false,
     },
     {
       id: 3,
@@ -159,6 +151,7 @@ export function App() {
       description: "Projeto criado utilizando React com Typescript, com um array, criamos, deletamos, atualizamos, listamos comentários.",
       repository: {icon: github, link: "https://github.com/JhonatanBS/REACT/tree/main/Curso_ROCKETSEAT/Projeto01/01_fundamentos_reactjs-ts"},
       deploy: {icon: netlify, link: "https://ignite-feed-jhonatan.netlify.app"},
+      done: false,
     },
     {
       id: 4,
@@ -167,6 +160,7 @@ export function App() {
       description: "Projeto criado utilizando React com Typescript, com um array, criamos, deletamos, atualizamos, listamos comentários.",
       repository: {icon: github, link: "https://github.com/JhonatanBS/DSVendas"},
       deploy: {icon: netlify, link: "https://dsvendas-jhonatanbs.netlify.app/"},
+      done: false,
     },
     {
       id: 5,
@@ -175,13 +169,26 @@ export function App() {
       description: "Projeto criado utilizando React com Typescript, com um array, criamos, deletamos, atualizamos, listamos comentários.",
       repository: {icon: github, link: "https://github.com/JhonatanBS/dsmovie"},
       deploy: {icon: netlify, link: "https://jhonatanbs-dsmovie.netlify.app/"},
+      done: false,
     },
-  ]
+  ]);
 
-  function handleAlterSlide(idSlide: number):void {
-    const actual = slides.find( slide => slide.id === idSlide);
+  function handleAlterSlide(idSlide: number) {
+    const actual = slides.map( slide => {
+      
+      if(slide.id === idSlide) {
+        slide.done = true;
+      }else{
+        slide.done = false;
+      }
+
+      return slide;
+    });
+
+    console.log("atual" + actual)
+    console.log( " set" + slides)
     
-    setSlide(actual);
+    setSlides(actual);
   }
 
   
@@ -319,41 +326,49 @@ export function App() {
       {/* Projects */}
 
       <section className={styles.sectionProjects}>
-
         <div className={styles.backgroundProject}>
-            <div className={styles.imgProject}>
-            <img src={slide?.image} />
-            </div>
             
-            <div className={styles.slideDescription}>
-              <div className={styles.radioList}>
-              {slides.map( slide => {
-              return <Radio key={slide.id} id={slide.id} AlterSlide={handleAlterSlide}/>
-              })}
-              </div>
+            {slides.map( slide => {
+               if(slide.done === true) {
+                 return(
+                   <> 
+                     <div className={styles.imgProject}> 
+                       <img src={slide.image} />
+                     </div>
+            
+                     <div className={styles.slideDescription}>
+                         <div className={styles.radioList}>
+                             {slides.map( slide => {
+                                 return <Radio 
+                                         key={slide.id} 
+                                         id={slide.id} 
+                                         AlterSlide={handleAlterSlide} 
+                                         done={slide.done}
+                                        />
+                             })}
+                         </div>
 
-              <div className={styles.textDescription}>
-                <h2>{slide?.title}</h2>
-                <p>{slide?.description}</p>
-                
-                <div className={styles.buttonLinks}>
-                  <a href={slide?.repository.link} target="_blank"> Repositório
-                  <img src={slide?.repository.icon} />
-                  </a>
+                       <div className={styles.textDescription}>
+                          <h2>{slide.title}</h2>
+                          <p>{slide.description}</p>
+                        
+                          <div className={styles.buttonLinks}>
+                            <a href={slide.repository.link} target="_blank"> Repositório
+                                <img src={slide.repository.icon} />
+                            </a>
 
-                  <a href={slide?.deploy.link} target="_blank"> Deploy
-                  <img src={slide?.deploy.icon} />
-                  </a>
-                </div>
-              </div>
-            </div>
+                            <a href={slide.deploy.link} target="_blank"> Deploy
+                                <img src={slide.deploy.icon} />
+                            </a>
+                          </div>
+                      </div>
+                     </div>
+                     </> 
+                  )
+              }
+            })} 
             
         </div>
-
-        {/* <div className={styles.titleProject}>
-          <Title title="Projetos" color="dark"/>
-        </div>
-         */}
       </section>
 
       {/* Contact */}
