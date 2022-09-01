@@ -121,7 +121,7 @@ export function App() {
     },
   ]
 
-  const [slide, setSlide] = useState<ISlides>(
+  const [slide, setSlide] = useState<ISlides | undefined>(
     {
       id: 1,
       image: capaTodo,
@@ -129,10 +129,10 @@ export function App() {
       description: "Projeto criado utilizando React com Typescript, utilizando um array, manipulamos o CRUD das tarefas para criar, deletar e atualizar as tarefas concluídas.",
       repository: {icon: github, link: "https://github.com/JhonatanBS/REACT/tree/main/Desafios/todoList"},
       deploy: {icon: netlify, link: "https://todo-jhonatan.netlify.app/"},
-    },
+    }
   );
 
-  const slides = [
+  const slides: ISlides[] = [
     {
       id: 1,
       image: capaTodo,
@@ -161,7 +161,7 @@ export function App() {
 
   function handleAlterSlide(idSlide: number):void {
     const actual = slides.find( slide => slide.id === idSlide);
-
+    
     setSlide(actual);
   }
 
@@ -302,26 +302,26 @@ export function App() {
       <section className={styles.sectionProjects}>
 
         <div className={styles.backgroundProject}>
-            <img src={slide.image} />
+            <img src={slide?.image} />
             
             <div className={styles.slideDescription}>
               <div className={styles.radioList}>
               {slides.map( slide => {
-              return <Radio id={slide.id} AlterSlide={handleAlterSlide}/>
+              return <Radio key={slide.id} id={slide.id} AlterSlide={handleAlterSlide}/>
               })}
               </div>
 
               <div className={styles.textDescription}>
-                <h2>{slide.title}</h2>
-                <p>{slide.description}</p>
+                <h2>{slide?.title}</h2>
+                <p>{slide?.description}</p>
                 
                 <div className={styles.buttonLinks}>
-                  <a href={slide.repository.link} target="_blank"> Repositório
-                  <img src={slide.repository.icon} />
+                  <a href={slide?.repository.link} target="_blank"> Repositório
+                  <img src={slide?.repository.icon} />
                   </a>
 
-                  <a href={slide.deploy.link} target="_blank"> Deploy
-                  <img src={slide.deploy.icon} />
+                  <a href={slide?.deploy.link} target="_blank"> Deploy
+                  <img src={slide?.deploy.icon} />
                   </a>
                 </div>
               </div>
