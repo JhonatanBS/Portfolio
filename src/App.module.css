@@ -225,6 +225,7 @@
 .sectionProjects {
   height: 100vh;
   width: 100%;
+  background-color: var(--secundaria-menos);
 }
 
 .backgroundProject {
@@ -578,11 +579,15 @@
 
   /* Projetos */
 
+  .sectionProjects {
+    height: 100%;
+  }
+
   .backgroundProject {
     height: 100%;
   }
 
-  .backgroundProject img{
+  .imgProject img{
     object-fit: contain;
     object-position:  top;
   }
