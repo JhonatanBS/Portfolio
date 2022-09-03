@@ -1,0 +1,39 @@
+.footer {
+  height: 130px;
+  width: 100%;
+  background-color: var(--secundaria);  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer p {
+  color: var(--light);
+  font-size: 2.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer span {
+  color: var(--primaria);
+}
+
+@media screen and (max-width: 850px) {
+  .footer p {
+    font-size: 2rem;
+  }  
+}
+
+@media screen and (max-width: 600px) {
+    .footer p {
+      font-size: 1.5rem;
+    }  
+}
+
+@media screen and (max-width: 500px) {
+    .footer p {
+      font-size: 1.2rem;
+    }  
+}

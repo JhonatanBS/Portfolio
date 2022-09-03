@@ -23,10 +23,10 @@ export function Header() {
       <nav className=
       {iconMenu === false ? `${styles.menu}` : `${styles.menu} ${styles.menuDisable}`}>
         <a href="/">Home</a>
-        <a href="">Sobre</a> 
-        <a href="">Conhecimentos</a> 
-        <a href="">Projetos</a> 
-        <a href="">Contato</a>   
+        <a href="#scroll-sobre">Sobre</a> 
+        <a href="#scroll-conhecimentos">Conhecimentos</a> 
+        <a href="#scroll-projetos">Projetos</a> 
+        <a href="#scroll-contato">Contato</a>   
       </nav> 
 
       <button className={styles.hamburguer} onClick={alterIconMenu}>

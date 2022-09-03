@@ -39,6 +39,7 @@ import logo from "./assets/img/Logotipo.png";
 import githubicon from "./assets/img/contact/githubicon.svg";
 import instagramicon from "./assets/img/contact/instagramicon.svg";
 import linkedinicon from "./assets/img/contact/linkedinicon.svg";
+import { Footer } from "./components/Footer/Footer";
 
 
 interface ISlides {
@@ -244,22 +245,22 @@ export function App() {
               <p>Lista</p>
               </a>
 
-              <a href="">
+              <a href="https://github.com/JhonatanBS/Fila" target="_blank">
               <Stack size={65} />
               <p>Fila</p>
               </a>
 
-              <a href="">
+              <a href="https://github.com/JhonatanBS/Pilha" target="_blank">
               <Cardholder size={65} />
               <p>Pilha</p>
               </a>
 
-              <a href="">
+              <a href="https://github.com/JhonatanBS/Arvore" target="_blank">
               <Tree size={65} />  
               <p>Árvore</p>
               </a>
 
-              <a href="">
+              <a href="https://github.com/JhonatanBS/tabelaHash" target="_blank">
               <TreeStructure size={65} />
               <p>Hash</p>
               </a>
@@ -273,7 +274,7 @@ export function App() {
 
       {/* SOBRE */}
 
-      <section className={styles.sectionAbout} >
+      <section className={styles.sectionAbout} id="scroll-sobre">
         <Title title={"Sobre"} color="dark"/>
 
         <div className={styles.about}>
@@ -302,7 +303,7 @@ export function App() {
 
       {/* KNOWLEDGE */}
 
-      <section className={styles.know}>
+      <section className={styles.know} id="scroll-conhecimentos">
 
         <div className={styles.backend} >
           
@@ -332,7 +333,7 @@ export function App() {
 
       {/* Projects */}
 
-      <section className={styles.sectionProjects}>
+      <section className={styles.sectionProjects} id="scroll-projetos">
         <div className={styles.backgroundProject}>
             
             {slides.map( slide => { 
@@ -380,7 +381,7 @@ export function App() {
 
       {/* Contact */}
 
-      <section className={styles.sectionContact}>
+      <section className={styles.sectionContact} id="scroll-contato">
         
         <div className={styles.network}>
           <div className={styles.logoNetwork}>
@@ -439,6 +440,8 @@ export function App() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </>
   )
 }

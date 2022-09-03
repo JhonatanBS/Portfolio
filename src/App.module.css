@@ -352,7 +352,6 @@
 .network {
   height: 100%;
   width: 40%;
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -361,18 +360,15 @@
 .logoNetwork {
   height: 22rem;
   width: 22rem;
-  /* background-color: blueviolet; */
 }
 
 .logoNetwork img {
   height: 100%;
   width: 100%;
-  /* background-color: coral; */
 }
 
 .titleNetwork {
   width: 100%;
-  /* background-color: aquamarine; */
   font-size: 3.5rem;
   text-align: center;
   color: var(--light);
@@ -382,7 +378,6 @@
 .socialNetwork {
   width: 100%;
   height: 100%;
-  /* background-color: chartreuse; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -394,7 +389,6 @@
   width: 100px;
   text-decoration: none;
   cursor: pointer;
-  /* background-color: red; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -403,7 +397,6 @@
 .socialNetwork div img {
   height: 100%;
   width: 100%;
-  /* background-color: yellow; */
 }
 
 .containerForm {
@@ -421,7 +414,6 @@
 .contact {
   height: 100%;
   width: 60%;
-  /* background-color: blue; */
   display: flex;
   align-items: center;
   padding-left: 3rem;
@@ -440,7 +432,6 @@
 
 .formContact {
   width: 100%;
-  /* background-color: red; */
   padding: 3rem;
 }
 
@@ -551,10 +542,8 @@
 
   /* Contatos */
 
-  .containerForm {
-    
+  .containerForm {  
     width: 800px;
-    
   }
 }
 
