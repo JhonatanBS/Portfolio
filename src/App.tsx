@@ -22,7 +22,7 @@ import javascript from "./assets/img/know/javascript.svg";
 import bootstrap from "./assets/img/know/bootstrap.svg";
 import react from "./assets/img/know/react.svg";
 import typescript from "./assets/img/know/typescript.svg";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 /* Images in Projects*/
 import capaTodo from "./assets/img/projects/capatodo.svg";
@@ -194,7 +194,7 @@ export function App() {
     setSlides(actual);
   }
 
-  function handleOnSubmit(event: SubmitEvent):void {
+  function handleOnSubmit(event: FormEvent):void {
     event.preventDefault();
     alert("Aguarde, essa seção não foi concluída");
   }
