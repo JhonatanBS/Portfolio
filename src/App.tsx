@@ -1,6 +1,6 @@
 import { Header } from "./components/Header/Header";
 import { Title } from "./components/Title/Title";
-import { NumberSquareSix, TreeStructure, Stack, Cardholder, SidebarSimple, Tree } from "phosphor-react";
+import { NumberSquareSix, TreeStructure, Stack, Cardholder, SidebarSimple, Tree, Key, GithubLogo } from "phosphor-react";
 
 import styles from "./App.module.css";
 import "./global.css";
@@ -33,6 +33,12 @@ import capadsVendas from "./assets/img/projects/capaDSVendas.png";
 import github from "./assets/img/projects/github.svg";
 import vercel from "./assets/img/projects/vercel.svg";
 import netlify from "./assets/img/projects/netlify.svg";
+
+/* Images Contact */
+import logo from "./assets/img/Logotipo.png";
+import githubicon from "./assets/img/contact/githubicon.svg";
+import instagramicon from "./assets/img/contact/instagramicon.svg";
+import linkedinicon from "./assets/img/contact/linkedinicon.svg";
 
 
 interface ISlides {
@@ -173,7 +179,7 @@ export function App() {
     },
   ]);
 
-  function handleAlterSlide(idSlide: number) {
+  function handleAlterSlide(idSlide: number):void {
     const actual = slides.map( slide => {
       
       if(slide.id === idSlide) {
@@ -185,12 +191,13 @@ export function App() {
       return slide;
     });
 
-    console.log("atual" + actual)
-    console.log( " set" + slides)
-    
     setSlides(actual);
   }
 
+  function handleOnSubmit(event: SubmitEvent):void {
+    event.preventDefault();
+    alert("Aguarde, essa seção não foi concluída");
+  }
   
   return (
     <>
@@ -328,7 +335,7 @@ export function App() {
       <section className={styles.sectionProjects}>
         <div className={styles.backgroundProject}>
             
-            {slides.map( slide => {
+            {slides.map( slide => { 
                if(slide.done === true) {
                  return(
                    <> 
@@ -349,7 +356,7 @@ export function App() {
                          </div>
 
                        <div className={styles.textDescription}>
-                          <h2>{slide.title}</h2>
+                          <h2 >{slide.title}</h2>
                           <p>{slide.description}</p>
                         
                           <div className={styles.buttonLinks}>
@@ -373,8 +380,64 @@ export function App() {
 
       {/* Contact */}
 
-      <section className={styles.contact}>
+      <section className={styles.sectionContact}>
+        
+        <div className={styles.network}>
+          <div className={styles.logoNetwork}>
+            <img src={logo}  />
+          </div>
 
+          <div className={styles.titleNetwork}>
+            <h6>Encontre pelas Rede Sociais</h6>
+          </div>
+
+          <div className={styles.socialNetwork}>
+
+            <a>
+              <img src={githubicon} alt="" />
+            </a>
+
+            <a>
+              <img src={linkedinicon} alt="" />
+            </a>
+
+            <a>
+              <img src={instagramicon} alt="" />
+            </a>
+
+          </div>
+        </div>
+
+        <div className={styles.contact}>
+          
+          <div className={styles.containerForm}>
+            <div>
+              <Title title="Contato" color="dark"/>
+            </div>
+
+            <div className={styles.formContact}>
+              <form onSubmit={handleOnSubmit}>
+                <label htmlFor="name">Nome:</label>
+                <input type="text" name="name" id="name" placeholder="Digite seu nome"/>
+
+                <label htmlFor="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu email"/>
+
+                <label htmlFor="message">Mensagem</label>
+                <textarea 
+                  placeholder="Digite sua Mensagem"
+                  name="message" 
+                  id="message" 
+                  maxLength={200} 
+                  minLength={10} 
+                  rows={7}>
+                </textarea>
+
+                <button type="submit">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   )

@@ -8,7 +8,7 @@ interface IId {
 
 export function Radio({id, done, AlterSlide}: IId) {
 
-	function handleAlterSlideOnClick() {
+	function handleAlterSlideOnClick():void {
 	  AlterSlide(id);	
 	}
 

@@ -98,7 +98,7 @@
 .cardAcademy .structure a {
   height: 114px;
   width: 114px;
-  background-color: var(--primaria-mais);
+  background-color: var(--primaria);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,7 +115,7 @@
 }
 
 .cardAcademy .structure a:hover {
-  background-color: var(--primaria);
+  background-color: var(--primaria-mais);
 }
 
 .structure p {
@@ -342,11 +342,162 @@
 
 /* Contato */
 
-.contact {
+.sectionContact {
   height: 100vh;
   width: 100%;
   background-color: var(--secundaria);
+  display: flex;
 }
+
+.network {
+  height: 100%;
+  width: 40%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoNetwork {
+  height: 22rem;
+  width: 22rem;
+  /* background-color: blueviolet; */
+}
+
+.logoNetwork img {
+  height: 100%;
+  width: 100%;
+  /* background-color: coral; */
+}
+
+.titleNetwork {
+  width: 100%;
+  /* background-color: aquamarine; */
+  font-size: 3.5rem;
+  text-align: center;
+  color: var(--light);
+  padding: 2rem 0;
+}
+
+.socialNetwork {
+  width: 100%;
+  height: 100%;
+  /* background-color: chartreuse; */
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+}
+
+.socialNetwork a {
+  height: 100px;
+  width: 100px;
+  text-decoration: none;
+  cursor: pointer;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialNetwork div img {
+  height: 100%;
+  width: 100%;
+  /* background-color: yellow; */
+}
+
+.containerForm {
+  height: 850px;
+  width: 950px;
+  background-color: var(--light);
+  border-radius: 15px;
+}
+
+.containerForm div:nth-child(1) {
+  width: 350px;
+}
+
+.contact {
+  height: 100%;
+  width: 60%;
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+}
+
+.formContact {
+  width: 100%;
+  /* background-color: red; */
+  padding: 3rem;
+}
+
+.formContact form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.formContact form label {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 0.5rem 0;
+  color: var(--secundaria-menos);
+}
+
+.formContact form input {
+  height: 3rem;
+  max-width: 700px;
+  margin-bottom: 3rem;
+  border: 0;
+  border-bottom: 2px dotted var(--primaria);
+  font-size: 1.5rem;
+}
+
+.formContact form input:focus, textarea:focus {
+  outline: 0;
+  font-size: 1.5rem;
+}
+
+.formContact form input::placeholder, textarea::placeholder{
+  font-size: 1.5rem;
+  color: #9a9494;
+  opacity: 10px;
+}
+
+.formContact form input:invalid, textarea:invalid {
+  border-bottom: 2px dotted var(--danger);
+}
+
+.formContact form textarea {
+  max-width: 700px;
+  resize: none;
+  border: 0;
+  border-bottom: 2px dotted var(--primaria);
+  font-size: 1.5rem;
+}
+
+.formContact form button {
+  width: 150px;
+  height: 60px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primaria);
+  font-size: 1.5rem;
+  color: var(--light);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: background-color 0.5s ease;
+}
+
+.formContact form button:hover {
+  background-color: var(--primaria-mais);
+}
+
+
 
 /******************************** BREAKPOINTS ********************************/
 
