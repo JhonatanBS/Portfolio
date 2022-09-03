@@ -384,6 +384,7 @@
   height: 100%;
   /* background-color: chartreuse; */
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 2rem 0;
 }
@@ -410,6 +411,7 @@
   width: 950px;
   background-color: var(--light);
   border-radius: 15px;
+  z-index: 1;
 }
 
 .containerForm div:nth-child(1) {
@@ -423,6 +425,17 @@
   display: flex;
   align-items: center;
   padding-left: 3rem;
+  position: relative;
+}
+
+.contact:after {
+  content: "";
+  height: 100%;
+  width: 25vw;
+  background-color: var(--primaria);
+  position: absolute;
+  right: 0;
+  z-index: 0;
 }
 
 .formContact {
@@ -536,6 +549,13 @@
     font-size: 1rem;
   }
 
+  /* Contatos */
+
+  .containerForm {
+    
+    width: 800px;
+    
+  }
 }
 
 @media screen and (max-width: 1600px) {
@@ -621,6 +641,12 @@
   
   .structure p {
     font-size: 1rem;
+  }
+
+  /* Contatos */
+
+  .containerForm {
+    width: 750px;
   }
   
 }
@@ -758,6 +784,52 @@
     padding: 0 1.8rem;
   }
 
+  /* Contatos */
+
+  .sectionContact {
+    height: 100%;
+    flex-direction: column;
+    padding-bottom: 3rem;
+  }
+
+  .contact:after {
+    /* content: ""; */
+    height: 50vh;
+    width: 100%;
+    background-color: var(--primaria);
+    position: absolute;
+    bottom: -3rem;
+    z-index: 0;
+    
+  }
+
+  .network {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    z-index: 1;
+    margin-bottom: 2rem;
+  }
+
+  .contact {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    padding: 0 3rem;
+  }
+
+  .contact .containerForm {
+    width: 100%;
+  }
+
+  .formContact {
+    padding: 4rem;
+  }
+
+  .contact .containerForm form input, .contact .containerForm form textarea{
+    max-width: 100%;
+  }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -843,6 +915,24 @@
     margin: 0;
   }
 
+}
+
+@media screen and (max-width: 600px) {
+
+  /* Contatos */
+
+  .containerForm div:nth-child(1) {
+    width: 320px;
+    font-size: 2rem;
+  }
+
+  .formContact {
+    padding: 0 3.5rem;
+  }
+
+  .formContact form label, textarea {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -946,5 +1036,22 @@
 
   .radioList {
     width: 300px;
+  }
+
+  /* Contatos */
+
+  .containerForm div:nth-child(1) {
+    width: 270px;
+    font-size: 1.5rem;
+  }
+
+  .formContact form label, textarea {
+    font-size: 1.5rem;
+  }
+
+  .sectionContact .contact .formContact form input::placeholder,
+  .sectionContact .contact .formContact form textarea::placeholder
+  {
+    font-size: 1rem;
   }
 }
