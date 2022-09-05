@@ -1,6 +1,6 @@
 .card {
   height: 250px;
-  width: 200px; 
+  min-width: 200px; 
   border-radius: 10px;
   text-align: center;
   transition: background-color .5s ease;
@@ -29,6 +29,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
 }
 
 .card .front:hover {

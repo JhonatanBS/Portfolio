@@ -182,13 +182,8 @@ export function App() {
 
   function handleAlterSlide(idSlide: number):void {
     const actual = slides.map( slide => {
+      slide.id === idSlide ? slide.done = true : slide.done = false;
       
-      if(slide.id === idSlide) {
-        slide.done = true;
-      }else{
-        slide.done = false;
-      }
-
       return slide;
     });
 
