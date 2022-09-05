@@ -389,16 +389,16 @@ export function App() {
 
           <div className={styles.socialNetwork}>
 
-            <a>
-              <img src={githubicon} alt="" />
+            <a href="https://github.com/JhonatanBS" target="_blank">
+              <img src={githubicon} alt="github" />
             </a>
 
-            <a>
-              <img src={linkedinicon} alt="" />
+            <a href="https://www.linkedin.com/in/jhonatanbezerradesenvolvedor/" target="_blank">
+              <img src={linkedinicon} alt="linkedin" />
             </a>
 
-            <a>
-              <img src={instagramicon} alt="" />
+            <a href="https://www.instagram.com/jhonatanbezs/" target="_blank">
+              <img src={instagramicon} alt="instagram" />
             </a>
 
           </div>

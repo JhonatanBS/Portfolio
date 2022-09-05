@@ -17,16 +17,16 @@ export function Header() {
     <header className={styles.header}>
 
       <div className={styles.logotipo}>
-        <img src={Logotipo} alt="" />  
+        <img src={Logotipo} alt="Logotipo" />  
       </div>
 
       <nav className=
       {iconMenu === false ? `${styles.menu}` : `${styles.menu} ${styles.menuDisable}`}>
         <a href="/">Home</a>
-        <a href="#scroll-sobre">Sobre</a> 
-        <a href="#scroll-conhecimentos">Conhecimentos</a> 
-        <a href="#scroll-projetos">Projetos</a> 
-        <a href="#scroll-contato">Contato</a>   
+        <a href="#scroll-sobre" onClick={alterIconMenu}>Sobre</a> 
+        <a href="#scroll-conhecimentos" onClick={alterIconMenu}>Conhecimentos</a> 
+        <a href="#scroll-projetos" onClick={alterIconMenu}>Projetos</a> 
+        <a href="#scroll-contato" onClick={alterIconMenu}>Contato</a>   
       </nav> 
 
       <button className={styles.hamburguer} onClick={alterIconMenu}>
